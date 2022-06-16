@@ -1,0 +1,8 @@
+site_name: 'mock-docs'
+site_description: 'mock-docs site desc'
+
+# nav:
+#   - Introduction: index.md
+
+plugins:
+  - techdocs-core
