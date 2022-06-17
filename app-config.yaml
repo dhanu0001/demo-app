@@ -40,6 +40,7 @@ backend:
       port: 5432
       user: postgres
       password: secret
+
   cache:
     store: memory
   # workingDirectory: /tmp # Use this to configure a working directory for the scaffolder, defaults to the OS temp-dir
@@ -47,7 +48,7 @@ backend:
 integrations:
   github:
     - host: github.com
-      token: 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
+      token: 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
       # This is a Personal Access Token or PAT from GitHub. You can find out how to generate this token, and more information
       # about setting up the GitHub integration here: https://backstage.io/docs/getting-started/configuration#setting-up-a-github-integration
       # token: ${GITHUB_TOKEN}
@@ -60,6 +61,10 @@ proxy:
   '/test':
     target: 'https://example.com'
     changeOrigin: true
+  '/circleci/api':
+    target: https://circleci.com/api/v1.1
+    headers:
+      Circle-Token: f95e55540321af6770472e8a5853e631d9c4c1e5
 
 # Reference documentation http://backstage.io/docs/features/techdocs/configuration
 # Note: After experimenting with basic setup, use CI/CD to generate docs
@@ -70,7 +75,7 @@ techdocs:
   # storageUrl: http://localhost:7000/api/techdocs/static/docs
   builder: 'local' # Alternatives - 'external'
   generator:
-    runIn: 'local' # Alternatives - 'docker'
+    runIn: 'docker' # Alternatives - 'docker'
   publisher:
     type: 'local' # Alternatives - 'googleGcs' or 'awsS3'. Read documentation for using alternatives.
 
@@ -78,10 +83,10 @@ auth:
   # see https://backstage.io/docs/auth/ to learn about auth providers
   environment: development
   providers: 
-  github:
+    github:
       development:
         clientId: 5da1e90f488571379114
-        clientSecret: c10cb49e8af297f3755baaf483aaca51cff016c1
+        clientSecret: ea80f323fda00137ec727351c9aade60d23981fe
 
 scaffolder:
   # see https://backstage.io/docs/features/software-templates/configuration for software template options

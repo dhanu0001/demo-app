@@ -67,6 +67,10 @@ import {
   RELATION_PART_OF,
   RELATION_PROVIDES_API,
 } from '@backstage/catalog-model';
+import {
+  EntityCircleCIContent,
+  isCircleCIAvailable,
+} from '@backstage/plugin-circleci';
 
 const cicdContent = (
   // This is an example of how you can implement your company's logic in entity page.
@@ -74,6 +78,9 @@ const cicdContent = (
   <EntitySwitch>
     <EntitySwitch.Case if={isGithubActionsAvailable}>
       <EntityGithubActionsContent />
+    </EntitySwitch.Case>
+    <EntitySwitch.Case if={isCircleCIAvailable}>
+      <EntityCircleCIContent />
     </EntitySwitch.Case>
 
     <EntitySwitch.Case>
