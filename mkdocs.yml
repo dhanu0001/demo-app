@@ -1,8 +1,7 @@
-site_name: 'mock-docs'
-site_description: 'mock-docs site desc'
+site_name: 'backstage-demo'
 
-# nav:
-#   - Introduction: index.md
+nav:
+  - Home: index.md
 
 plugins:
   - techdocs-core
