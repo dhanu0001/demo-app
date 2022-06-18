@@ -76,6 +76,8 @@ techdocs:
   builder: 'external' # Alternatives - 'external'
   generator:
     runIn: 'docker' # Alternatives - 'docker'
+    dockerImage: 'spotify/techdocs'
+    pullImage: true
   publisher:
     type: 'local' # Alternatives - 'googleGcs' or 'awsS3'. Read documentation for using alternatives.
 
