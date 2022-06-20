@@ -79,7 +79,14 @@ techdocs:
     dockerImage: 'spotify/techdocs'
     pullImage: true
   publisher:
-    type: 'local' # Alternatives - 'googleGcs' or 'awsS3'. Read documentation for using alternatives.
+#     type: 'local' # Alternatives - 'googleGcs' or 'awsS3'. Read documentation for using alternatives.
+    type: 'awsS3'
+    awsS3:
+      bucketName: 'sakstest'
+      region: ap-south-1
+      credentials:
+        accessKeyId: AKIA23PESRF6STVCXAFR
+        secretAccessKey: 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
 
 auth:
   # see https://backstage.io/docs/auth/ to learn about auth providers
