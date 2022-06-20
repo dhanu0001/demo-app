@@ -20,14 +20,19 @@ jobs:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
     env:
+      CI: 'true'
+      TECHDOCS_S3_BUCKET_NAME: 'sakstest'
+      AWS_ACCESS_KEY_ID: 'AKIA23PESRF6STVCXAFR'
+      AWS_SECRET_ACCESS_KEY: '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'
+      AWS_REGION: 'ap-south-1'
       ENTITY_NAMESPACE: 'default'
       ENTITY_KIND: 'Component'
-      ENTITY_NAME: 'my-doc-entity'
+      ENTITY_NAME: 'backstage-demo'
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - name: Checkout cod
+      - name: Checkout code
         uses: actions/checkout@v2
         
       - uses: actions/setup-node@v2
