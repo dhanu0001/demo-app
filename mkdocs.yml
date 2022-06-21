@@ -1,5 +1,5 @@
-site_name: 'mock-docs'
-site_description: 'mock-docs site desc'
+site_name: 'TechDocs site'
+site_description: 'TechDoc site desc'
 
 nav:
   - Introduction: index.md
