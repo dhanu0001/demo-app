@@ -2,7 +2,7 @@
 
 This is document for Saks projects
 
-Getting started testing
+Getting started 
 
 Start writing your documentation by adding more markdown (.md) files to this folder (/docs) or replace the content in this file.
 
