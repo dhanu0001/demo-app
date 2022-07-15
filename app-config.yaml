@@ -32,14 +32,14 @@ backend:
   # This is for local developement only, it is not recommended to use this in production
   # The production database configuration is stored in app-config.production.yaml
   database:
-    # client: better-sqlite3
-    # connection: ':memory:'
-    client: pg
-    connection:
-      host: 127.0.0.1
-      port: 5432
-      user: postgres
-      password: secret
+     client: better-sqlite3
+     connection: ':memory:'
+    #client: pg
+    #connection:
+    #  host: 127.0.0.1
+     # port: 5432
+     # user: postgres
+     # password: secret
 
   cache:
     store: memory
