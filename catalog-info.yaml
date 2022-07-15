@@ -1,14 +1,14 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: backstage-demo
+  name: demo-app
   description: An example of a Backstage application.
   # Example for optional annotations
   annotations:
-    circleci.com/project-slug: github/ShikhaVashishtha/backstage-demo
-    github.com/project-slug: ShikhaVashishtha/backstage-demo
+    circleci.com/project-slug: github/dhanu0001/demo-app
+    github.com/project-slug: dhanu0001/demo-app
     backstage.io/techdocs-ref: dir:.
 spec:
   type: service
-  owner: user:ShikhaVashishtha
+  owner: user:dhanu0001
   lifecycle: experimental
