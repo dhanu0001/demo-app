@@ -48,7 +48,7 @@ backend:
 integrations:
   github:
     - host: github.com
-      token: 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
+      token: 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
       # This is a Personal Access Token or PAT from GitHub. You can find out how to generate this token, and more information
       # about setting up the GitHub integration here: https://backstage.io/docs/getting-started/configuration#setting-up-a-github-integration
       # token: ${GITHUB_TOKEN}
@@ -62,11 +62,11 @@ proxy:
   #   target: 'https://example.com'
   #   changeOrigin: true
 
+  proxy:
   '/circleci/api':
     target: https://circleci.com/api/v1.1
     headers:
-      Circle-Token: f95e55540321af6770472e8a5853e631d9c4c1e5
-
+      Circle-Token: 6b5be93dae6922793e42c7f601b2ff5cc2a6ee7c
 # Reference documentation http://backstage.io/docs/features/techdocs/configuration
 # Note: After experimenting with basic setup, use CI/CD to generate docs
 # and an external cloud storage when deploying TechDocs for production use-case.
